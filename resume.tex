@@ -1,0 +1,189 @@
+%-------------------------
+% Resume in Latex
+% Author : Xinyue Ou 
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} &  \textit{\small #2} \\
+    \end{tabular*}\vspace{-1pt}
+    {\begin{itemize}[leftmargin=*]
+    \small{#3}
+    \end{itemize}}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Xinyue Ou} & Email : xinyue.ou@yahoo.com \\ 
+   & Mobile : +1 858-405-4803\\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, San Diego}{La Jolla, CA}
+      {Master of Science in Computer Science;  GPA: 3.80}{Sep. 2017 -- Dec. 2018}
+    \resumeSubheading
+      {Shanghai Jiao Tong University}{Shanghai, China}
+      {Bachelor of Science in Electrical and Computer Engineering;  GPA: 3.89}{Sep. 2013 -- Aug. 2017}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+	
+
+    \resumeSubheading
+      {Intel Asia-Pacific R\&D Center}{Shanghai, China}
+      {Software Engineer Intern in BigDL Data Analytics}{Feb 2017 - July 2017}
+      \resumeItemListStart
+        \resumeItem{Neural Network Modules}
+          {Used script language to efficiently port NN modules from Scala to Python.}
+        \resumeItem{Memory Optimization}
+          {Developed a shared-memory mechanism among modules saving half memory usage.}
+        \resumeItem{Graph Model Converter}{ Built a graph converter in Scala converting machine learning models into graphs to accelerate the training of NN modules.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Ailibi Medical Technology Co.}{Shanghai, China}
+      {Software Engineer Intern}{Dec 2014 -- Feb 2015}
+      \resumeItemListStart
+        \resumeItem{Website Development}
+          {Built the company's official website using HTML/CSS/JQuery.}
+        \resumeItem{App Development Docs}
+          {Documenting user requirements and specifications for the company's mobile app.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+       {Trition HTTP Server - C++}{April 2018 -- April 2018}
+	   {Built a web server implementing  a subset of the HTTP/1.1 protocol specification using TCP socket programming.}
+    
+    \resumeProjectHeading
+       {UCSD Class Schedule Calendar Generator - Javascript}{Feb 2018 -- Feb 2018}
+	   {Designed a chrome extension that can generate a calendar file by parsing the web page of UCSD WebReg. }
+  
+    \resumeProjectHeading
+       {RNN Music Generator - Python}{Feb 2018 -- Mar 2018}
+       {Implemented a char-based generative LSTM model and trained it to “write” songs.}
+  
+	 \resumeProjectHeading
+	   {XQuery Processor - Java, XML}{Feb 2018 - Mar 2018}
+	   {Developed a simplified XQuery compiler with ANTLR and Java JDOM2. Implemented an optimized join operator to accelerate the join operation. Used gradle to set up the projecgt and  manage package dependency.}
+  
+	 \resumeProjectHeading{Gossip Membership Protocol - C++}{Nov 2017 -- Dec 2017}
+	   {Implemented a gossip membership protocol in an emulated distributed system.}
+    
+  
+	 \resumeProjectHeading
+       {Multiprogramming Support for Nachos Kernel - Java}{Oct 2017 -- Nov 2017}
+       {Designed a virtual memory management system that enables demand paging, lazy page loading and page swapping.
+       Managed multithread programming using mutex, semaphore and conditional variable. 
+       Implemented file-related and process-related system calls for Nachos kernel.}
+    
+   \resumeProjectHeading
+	   {Passive Entry Passive Start Smart Key System - Java}{Jun 2017 -- Aug 2017}
+	   { Built an Android App for motor vehicle key control based on Bluetooth Low Energy protocol. Developed with FastBLE framework and implemented noise filtering algorithm.}
+         
+  
+  %  \resumeProjectHeading
+  %       {Optimization of CT Image Reconstruction - MatLab}{Mar 2016 -- May 2016}
+  %       {Used CGLS method to reconstruct medical image and optimized the computation speed by profiling. Built a GUI in MatLab which can inspect each slice in any given direction and the 3D image. }
+  %  \resumeProjectHeading
+  % 	     { Sign Language Translator Based on PIC32 - C}{Jun 2016 -- Aug 2016}
+  % 	     {Constructed a sign language translator based on hand gestures captured by flex sensors and speed sensors. Developed a succinct data structure that makes use of small storage space of PIC32 to store signals and convert the matching to voice via VS1003 module}
+	%  \resumeProjectHeading
+	%      {Foreground Extraction Based on Optical Flow - C++}{Sep 2014 -- Mar 2015}
+	%      {Used OpenCV library to compute intensive optical flow fields for each frame and discretized the vector fields.Tracked the foreground object based on the largest connected component, }
+
+ 
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+  \resumeItem{Languages}{: C++, Java, Python, Scala, Javascript, SQL. }\vspace{-5pt}
+  \resumeItem{Tools}{: Git, TensorFlow, PyTorch, Docker, Gradle, Maven. }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
