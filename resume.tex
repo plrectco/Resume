@@ -45,9 +45,15 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{#2 \vspace{-2pt}}
   }
 }
+\newcommand{\resumeSimpleItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
@@ -57,7 +63,14 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeProjectHeading}[3]{
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} &  \textit{\small #2} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSimpleProjectHeading}[3]{
   \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} &  \textit{\small #2} \\
@@ -66,7 +79,6 @@
     \small{#3}
     \end{itemize}}\vspace{-5pt}
 }
-
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -94,38 +106,56 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of California, San Diego}{La Jolla, CA}
-      {Master of Science in Computer Science;  GPA: 3.80}{Sep. 2017 -- Dec. 2018}
+      {Master of Science in Computer Science;  GPA: 3.80}{Sept 2017 -- Mar 2019}
+      \resumeItemListStart
+        \resumeItem{Courses}{Operating System, Database, Graduate Network, Neural Networks, Parallel Computing} 
+      \resumeItemListEnd
     \resumeSubheading
       {Shanghai Jiao Tong University}{Shanghai, China}
-      {Bachelor of Science in Electrical and Computer Engineering;  GPA: 3.89}{Sep. 2013 -- Aug. 2017}
+      {Bachelor of Science in Electrical and Computer Engineering;  GPA: 3.89}{Sept 2013 -- Aug 2017}
   \resumeSubHeadingListEnd
 
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+  \resumeItem{Languages}{: C++, Java, Python, Scala, Javascript, SQL, Go. }\vspace{-5pt}
+  \resumeItem{Skills}{: Distributed System, Multiprogramming, Consensus Protocol, NoSQL, Machine Learning}\vspace{-5pt}
+  \resumeItem{Tools}{: Git, TensorFlow, PyTorch, Docker, Gradle, Maven, Django, ProtoBuf, ANTLR, Netty, Flume, gRPC. }
+  \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-	
+    \resumeSubheading
+    {Google, Inc.}{Mountain View, CA}
+    {Software Engineer Intern @ Display Ads Infrastructure}{June 2018 -- Sept 2018}
+    \resumeItemListStart 
+        \resumeItem{}{Developed MapReduce jobs in Go to process billion-scale user profile and performed PetaByte-scale I/O with replicated and sharded storage.}
+        \resumeItem{}{Design user data profile analyzing pipelines in C++ that fix 75\% missing traffic tracking.}
+        \resumeItem{}{Deploy 10+ jobs through large-scale cluster management tools and executed phased rollout and A/B testing.}
+        \resumeItem{}{Implemented MVT pattern web application using Django along with Javascript and deployed on AppEngine.}
+    \resumeItemListEnd
 
     \resumeSubheading
       {Intel Asia-Pacific R\&D Center}{Shanghai, China}
-      {Software Engineer Intern in BigDL Data Analytics}{Feb 2017 - July 2017}
+      {Software Engineer Intern @ BigDL Data Analytics}{Feb 2017 -- July 2017}
       \resumeItemListStart
-        \resumeItem{Neural Network Modules}
-          {Used script language to efficiently port NN modules from Scala to Python.}
-        \resumeItem{Memory Optimization}
-          {Developed a shared-memory mechanism among modules saving half memory usage.}
-        \resumeItem{Graph Model Converter}{ Built a graph converter in Scala converting machine learning models into graphs to accelerate the training of NN modules.}
+        \resumeItem{}
+          {Used Bash and Python to efficiently port Neural Network modules from Scala to Python.}
+        \resumeItem{}
+          {Designed memory shared mechanism for buffers in Neural Network modules that saves 50\% of memory usage.}
+        \resumeItem{}{Built a graph converter in Scala that converts machine learning models into graphs to accelerate the training of NN modules.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Ailibi Medical Technology Co.}{Shanghai, China}
-      {Software Engineer Intern}{Dec 2014 -- Feb 2015}
-      \resumeItemListStart
-        \resumeItem{Website Development}
-          {Built the company's official website using HTML/CSS/JQuery.}
-        \resumeItem{App Development Docs}
-          {Documenting user requirements and specifications for the company's mobile app.}
-      \resumeItemListEnd
+%     \resumeSubheading
+%       {Ailibi Medical Technology Co.}{Shanghai, China}
+%       {Software Engineer Intern}{Dec 2014 -- Feb 2015}
+%       \resumeItemListStart
+%         \resumeItem{}
+%           {Built the company's official website using HTML/CSS/JQuery.}
+%         \resumeItem{}
+%           {Documenting user requirements and specifications for the company's mobile app.}
+%       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -133,36 +163,39 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-       {Trition HTTP Server - C++}{April 2018 -- April 2018}
-	   {Built a web server implementing  a subset of the HTTP/1.1 protocol specification using TCP socket programming.}
-    
-    \resumeProjectHeading
-       {UCSD Class Schedule Calendar Generator - Javascript}{Feb 2018 -- Feb 2018}
-	   {Designed a chrome extension that can generate a calendar file by parsing the web page of UCSD WebReg. }
-  
-    \resumeProjectHeading
-       {RNN Music Generator - Python}{Feb 2018 -- Mar 2018}
-       {Implemented a char-based generative LSTM model and trained it to “write” songs.}
+       {Tessaract: Triton Dropbox Service (Team Leader) - Java, gRPC}{May 2018 -- June 2018}
+        \resumeItemListStart
+            \resumeSimpleItem{Implemnted simplified RAFT consensus protocol for server cluster leader election and log replication.}
+            \resumeSimpleItem{Designed a achitecture that separates storage server and client-handling server.}
+            \resumeSimpleItem{Developed server-client logics with gRPC and ProtoBuffer.}
+        \resumeItemListEnd
+ 
+
+%   \resumeProjectHeading
+%        {RNN Music Generator - Python}{Feb 2018 -- Mar 2018}
+%        {Implemented a char-based generative LSTM model using PyTorch and trained it to “write” songs.}
   
 	 \resumeProjectHeading
-	   {XQuery Processor - Java, XML}{Feb 2018 - Mar 2018}
-	   {Developed a simplified XQuery compiler with ANTLR and Java JDOM2. Implemented an optimized join operator to accelerate the join operation. Used gradle to set up the projecgt and  manage package dependency.}
-  
-	 \resumeProjectHeading{Gossip Membership Protocol - C++}{Nov 2017 -- Dec 2017}
-	   {Implemented a gossip membership protocol in an emulated distributed system.}
+       {XQuery Processor (Team Leader) - Java, ANTLR}{Feb 2018 -- Mar 2018}
+       \resumeItemListStart
+            \resumeSimpleItem{Developed XQuery compiler with ANTLR and Java JDOM2 to process XQuery and generate output.}
+            \resumeSimpleItem{Optimized join operator using Union Find to cluster joins and table size to determine join order.}
+            \resumeSimpleItem{Used gradle to set up the project and manage package dependency.}
+       \resumeItemListEnd 
     
   
 	 \resumeProjectHeading
        {Multiprogramming Support for Nachos Kernel - Java}{Oct 2017 -- Nov 2017}
-       {Designed a virtual memory management system that enables demand paging, lazy page loading and page swapping.
-       Managed multithread programming using mutex, semaphore and conditional variable. 
-       Implemented file-related and process-related system calls for Nachos kernel.}
+       \resumeItemListStart
+         \resumeSimpleItem{Designed a virtual memory management system that enables demand paging, lazy paging and page swapping.}
+         \resumeSimpleItem{Managed multithread programming using mutex, semaphore and conditional variable.}
+         \resumeSimpleItem{Implemented file-related and process-related system calls for Nachos kernel.}
+       \resumeItemListEnd
     
-   \resumeProjectHeading
-	   {Passive Entry Passive Start Smart Key System - Java}{Jun 2017 -- Aug 2017}
-	   { Built an Android App for motor vehicle key control based on Bluetooth Low Energy protocol. Developed with FastBLE framework and implemented noise filtering algorithm.}
+%    \resumeProjectHeading
+% 	   {Passive Entry Passive Start Smart Key System - Java, Android}{Jun 2017 -- Aug 2017}
+% 	   { Built an Android App for motor vehicle key control based on Bluetooth Low Energy protocol. Developed with FastBLE framework and implemented noise filtering algorithm.}
          
-  
   %  \resumeProjectHeading
   %       {Optimization of CT Image Reconstruction - MatLab}{Mar 2016 -- May 2016}
   %       {Used CGLS method to reconstruct medical image and optimized the computation speed by profiling. Built a GUI in MatLab which can inspect each slice in any given direction and the 3D image. }
@@ -177,13 +210,18 @@
   \resumeSubHeadingListEnd
 
 %
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
+
+%-----------More, Other Projects-----------------
+\section{Side Projects}
   \resumeSubHeadingListStart
-  \resumeItem{Languages}{: C++, Java, Python, Scala, Javascript, SQL. }\vspace{-5pt}
-  \resumeItem{Tools}{: Git, TensorFlow, PyTorch, Docker, Gradle, Maven. }
+    \resumeSimpleProjectHeading 
+       {NewChain: A BitCoin Immitator - Java, Netty}{July 2018 -- Aug 2018}
+       {Implemented a bitcoin-like ledger service using Netty framework.} 
+    \resumeSimpleProjectHeading
+       {TClassCal: UCSD Class Schedule Calendar Generator - Javascript}{Feb 2018} 
+	   {Designed a chrome extension that can generate a calendar file by parsing the web page of UCSD WebReg. }
+    \resumeSimpleProjectHeading{Gossip Membership Protocol - C++}{Nov 2017 -- Dec 2017}
+	   {Implemented a gossip membership protocol in an emulated distributed system.}
   \resumeSubHeadingListEnd
-
-
 %-------------------------------------------
 \end{document}
