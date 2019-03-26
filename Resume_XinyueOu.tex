@@ -1,3 +1,4 @@
+
 %-------------------------
 % Resume in Latex
 % Author : Xinyue Ou 
@@ -106,20 +107,20 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of California, San Diego}{La Jolla, CA}
-      {Master of Science in Computer Science;  GPA: 3.92}{Sept 2017 -- Mar 2019}
+      {Master of Science in Computer Science}{Sept 2017 -- Mar 2019}
       \resumeItemListStart
-        \resumeItem{Courses: }{Operating System, Database, Graduate Network, Neural Networks, Parallel Computing.} 
+        \resumeItem{Courses: }{Operating Systems, Security, Database, Networked Systems, Neural Networks, Parallel Computing.} 
       \resumeItemListEnd
     \resumeSubheading
       {Shanghai Jiao Tong University}{Shanghai, China}
-      {Bachelor of Science in Electrical and Computer Engineering;  GPA: 3.81}{Sept 2013 -- Aug 2017}
+      {Bachelor of Science in Electrical and Computer Engineering}{Sept 2013 -- Aug 2017}
   \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
-  \resumeItem{Languages}{: C++, Java, Python, Scala, Javascript, SQL, Go. }\vspace{-5pt}
-  \resumeItem{Skills}{: Distributed System, Multiprogramming, Consensus Protocol, NoSQL, Machine Learning}\vspace{-5pt}
+  \resumeItem{Languages}{: C/C++, Go, Java, Python, Ocaml, Scala, Javascript, SQL. }\vspace{-5pt}
+  \resumeItem{Skills}{: Distributed System, Multiprogramming, NoSQL, Machine Learning}\vspace{-5pt}
   \resumeItem{Tools}{: Git, TensorFlow, PyTorch, Docker, Gradle, Maven, Django, ProtoBuf, ANTLR, Netty, Flume, gRPC. }
   \resumeSubHeadingListEnd
 
@@ -130,10 +131,9 @@
     {Google, Inc.}{Mountain View, CA}
     {Software Engineer Intern @ Display Ads Infrastructure}{June 2018 -- Sept 2018}
     \resumeItemListStart 
-        \resumeItem{}{Developed MapReduce jobs in Go to process user profiles and performed PetaByte-scale I/O with replicated and sharded storage.}
-        \resumeItem{}{Designed user data profile analyzing jobs in C++ that fix 75\% missing traffic tracking.}
-        \resumeItem{}{Deployed 10+ jobs through large-scale cluster management tools and executed phased rollout and A/B testing.}
-        \resumeItem{}{Implemented MVT pattern web application using Django along with Javascript and deployed on AppEngine.}
+        \resumeItem{}{Developed a data pipeline in \textbf{Flume} to generate user profile digest for ads recommendation, fixing 75\% missing data generation and traffic tracking.}
+        \resumeItem{}{Deployed 10+ jobs through \textbf{Borg} and executed phased rollout.}
+        \resumeItem{}{Implemented an web UI using \textbf{Django} to monitor results of petabyte scale data service.}
     \resumeItemListEnd
 
     \resumeSubheading
@@ -162,26 +162,42 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeProjectHeading
-       {Tessaract: Triton Dropbox Service (Team Leader) - Java, gRPC}{May 2018 -- June 2018}
-        \resumeItemListStart
-            \resumeSimpleItem{Implemnted simplified RAFT consensus protocol for server cluster leader election and log replication.}
-            \resumeSimpleItem{Designed an achitecture that separates storage server and client-handling server.}
-            \resumeSimpleItem{Developed server-client logics with gRPC and ProtoBuffer.}
-        \resumeItemListEnd
+  	\resumeProjectHeading{Key Value Storage Server - Go}{Feb 2019 -- Mar 2019}
+		\resumeItemListStart
+			\resumeSimpleItem{Designed a strongly consistent key value storage system with linearizability and idempotent transaction that can tolerate multiple server failures and network partition.}
+			\resumeSimpleItem{Implemented a full RAFT protocol with leader election, log replication, log compaction and snapshot.}
+			
+			\resumeSimpleItem{Heavily exposed to multithreading semantics of Go.}
+			
+		\resumeItemListEnd
+	
+	\resumeProjectHeading{Vulnerability Excavation of Secure DDS Systems - Ocaml, Python, Docker}{Oct 2018 -- Dec 2018}
+		\resumeItemListStart
+				\resumeSimpleItem{Developed a passive network reconnaissance technique extracting underlying data object topology of Secure DDS Systems, a widely used protocol for IoT devices. Experimented process in a Docker containerized within a software defined network.}
+				\resumeSimpleItem{Built a system validation and penetration testing tools of DDS access control using Ocaml and Imandra, a formal verification tool.}
+		\resumeItemListEnd
+
+   % \resumeProjectHeading
+    %   {Tessaract: Triton Dropbox Service (Team Leader) - Java, gRPC}{May 2018 -- June 2018}
+     %   \resumeItemListStart
+      %      \resumeSimpleItem{Implemnted simplified RAFT consensus protocol for server cluster leader election and log replication.}
+       %     \resumeSimpleItem{Designed an achitecture that separates storage server and client-handling server.}
+        %    \resumeSimpleItem{Developed server-client logics with gRPC and ProtoBuffer.}
+        %\resumeItemListEnd
  
 
 %   \resumeProjectHeading
 %        {RNN Music Generator - Python}{Feb 2018 -- Mar 2018}
 %        {Implemented a char-based generative LSTM model using PyTorch and trained it to “write” songs.}
   
-	 \resumeProjectHeading
-       {XQuery Processor (Team Leader) - Java, ANTLR}{Feb 2018 -- Mar 2018}
-       \resumeItemListStart
-            \resumeSimpleItem{Developed XQuery compiler with ANTLR and Java JDOM2 to process XQuery and generate output.}
-            \resumeSimpleItem{Optimized join operator using Union Find to cluster joins and table size to determine join order.}
-            \resumeSimpleItem{Used gradle to set up the project and manage package dependency.}
-       \resumeItemListEnd 
+  
+	 % \resumeProjectHeading
+     %   {XQuery Processor (Team Leader) - Java, ANTLR}{Feb 2018 -- Mar 2018}
+     %   \resumeItemListStart
+     %        \resumeSimpleItem{Developed XQuery compiler with ANTLR and Java JDOM2 to process XQuery and generate output.}
+     %        \resumeSimpleItem{Optimized join operator using Union Find to cluster joins and table size to determine join order.}
+     %        \resumeSimpleItem{Used gradle to set up the project and manage package dependency.}
+     %   \resumeItemListEnd
     
   
 	 \resumeProjectHeading
@@ -207,16 +223,22 @@
 	%      {Used OpenCV library to compute intensive optical flow fields for each frame and discretized the vector fields.Tracked the foreground object based on the largest connected component, }
 
  
-  \resumeSubHeadingListEnd
+%  \resumeSubHeadingListEnd
 
 %
 
 %-----------More, Other Projects-----------------
-\section{Side Projects}
-  \resumeSubHeadingListStart
-    \resumeSimpleProjectHeading 
-       {NewChain: A BitCoin Immitator - Java, Netty}{July 2018 -- Aug 2018}
-       {Implemented a bitcoin-like ledger service using Netty framework.} 
+%\section{Side Projects}
+%  \resumeSubHeadingListStart
+	\resumeSimpleProjectHeading{Triton Router - C}{Nov 2018 -- Dec 2018}{
+		Implemented a simple router that supports ARP, ICMP and IP.
+	}
+	\resumeSimpleProjectHeading{Sliding Window Protocol for Flow Control - C}{Oct 2019}{
+		Implemented an efficient Go-back-N sliding window protocol with CRC error detection. 
+	}
+  %  \resumeSimpleProjectHeading 
+   %    {NewChain: A BitCoin Immitator - Java, Netty}{July 2018 -- Aug 2018}
+    %   {Implemented a bitcoin-like ledger service using Netty framework.} 
     \resumeSimpleProjectHeading
        {UCSD Class Schedule Calendar Generator - Javascript}{Feb 2018} 
 	   {Designed a chrome extension that can generate a calendar file by parsing the web page of UCSD WebReg. }
