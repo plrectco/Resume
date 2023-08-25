@@ -1,86 +1,4 @@
-==== Starting job fast-eval.xyharry.030ffa42.test.targeting_server.shard-3 on si... FAILED    │└─▪ gqui from /cns/nn-d/home/ads-keyval/acs/viral_production/blue/negative_keyword.0/snapshot.20230324-09d2626.sstable proto ads.video.viral.KeywordSignal.KeywordMetadata select value_
-==== Staging package fast-eval.xyharry.030ffa42.targeting_server.shard-0.sitechunker-patterns_pkg_v1-23d58a4e_a7e6e22e_eae2e387_0a52057b_95f938b9.cf4753│┌─[xyharry][malygos][~][15:54:20]
-be59af041b/viral-nonprivileged-eval on nn... SUCCESS [uid=4929373293868]                                                                                │└─▪ ^C                                                             ==== Making package fast-eval.xyharry.030ffa42.test.targeting_server.shard-0.viral_server_data_for_custom_binary_v1-7e6d6ba6_ea761fdd_64072e32_a0267084_4c│  original_with_stopwords: {    # (ads.video.viral.KeywordSignal.UnsortedTokenizedKeyword) size=10B
-45657e.2e98230f43b9a406/viral-nonprivileged-eval on si... SUCCESS [uid=10087379350581]                                                                    │    terms: {    # (ads.video.viral.KeywordSignal.Term) size=8B
- Resume_XinyueOu.tex
 
- %-------------------------
- % Resume in Latex
- % Author : Xinyue Ou
- % License : MIT
- %------------------------
-
- \documentclass[letterpaper,11pt]{article}
-
- \usepackage{latexsym}
- \usepackage[empty]{fullpage}
- \usepackage{titlesec}
- \usepackage{marvosym}
- \usepackage[usenames,dvipsnames]{color}
- \usepackage{verbatim}
- \usepackage{enumitem}
- \usepackage[pdftex]{hyperref}
- \usepackage{fancyhdr}
-
-
- \pagestyle{fancy}
- \fancyhf{} % clear all header and footer fields
- \fancyfoot{}
- \renewcommand{\headrulewidth}{0pt}
- \renewcommand{\footrulewidth}{0pt}
-
- % Adjust margins
- \addtolength{\oddsidemargin}{-0.375in}
- \addtolength{\evensidemargin}{-0.375in}
- \addtolength{\textwidth}{1in}
- \addtolength{\topmargin}{-.5in}
- \addtolength{\textheight}{1.0in}
-
- \urlstyle{same}
-
- \raggedbottom
- \raggedright
- \setlength{\tabcolsep}{0in}
-
- % Sections formatting
- \titleformat{\section}{
-   \vspace{-4pt}\scshape\raggedright\large
- }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
- %-------------------------
- % Custom commands
- \newcommand{\resumeItem}[2]{
-   \item\small{
-     \textbf{#1}{#2 \vspace{-2pt}}
-   }
- }
- \newcommand{\resumeSimpleItem}[1]{
-   \item\small{
-     {#1 \vspace{-2pt}}
-   }
- }
-
-
- \newcommand{\resumeSubheading}[4]{
-   \vspace{-1pt}\item
-     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-       \textbf{#1} & #2 \\
-       \textit{\small#3} & \textit{\small #4} \\
-     \end{tabular*}\vspace{-5pt}
- }
-
- \newcommand{\resumeProjectHeading}[2]{
-   \vspace{-3pt}\item
-     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-       \textbf{#1} &  \textit{\small #2} \\
-     \end{tabular*}\vspace{-1pt}
- }
-
- \newcommand{\resumeSimpleProjectHeading}[3]{
-   \vspace{-3pt}\item
-     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
- ~/Github/Resume/Resume_XinyueOu.tex   CWD: /Users/xyharry/Github/Resume   Line: 1  Column: 0
-"Resume_XinyueOu.tex" 249L, 10686B
 %-------------------------
 % Resume in Latex
 % Author : Xinyue Ou 
@@ -146,6 +64,15 @@ be59af041b/viral-nonprivileged-eval on nn... SUCCESS [uid=4929373293868]        
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeSubheadingTwoRoles}[6]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeProjectHeading}[2]{
   \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -179,36 +106,34 @@ be59af041b/viral-nonprivileged-eval on nn... SUCCESS [uid=4929373293868]        
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Xinyue Ou} & Email : xinyue.ou@yahoo.com \\ 
+  \textbf{\Large Xinyue Ou} & Email : xinyue3ou@gmail.com \\ 
    & Mobile : +1 858-405-4803\\
 \end{tabular*}
 
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of California, San Diego}{La Jolla, CA}
-      {Master of Science in Computer Science}{Sept 2017 -- Mar 2019}
-      \resumeItemListStart
-        \resumeItem{Courses: }{Operating Systems, Security, Database, Networked Systems, Neural Networks, Parallel Computing.} 
-      \resumeItemListEnd
-    \resumeSubheading
-      {Shanghai Jiao Tong University}{Shanghai, China}
-      {Bachelor of Science in Electrical and Computer Engineering}{Sept 2013 -- Aug 2017}
-  \resumeSubHeadingListEnd
-
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
-  \resumeItem{Languages}{: C/C++, Go, Java, Python, Ocaml, Scala, Javascript, SQL. }\vspace{-5pt}
-  \resumeItem{Skills}{: Distributed System, Multiprogramming, NoSQL, Machine Learning}\vspace{-5pt}
-  \resumeItem{Tools}{: Git, TensorFlow, PyTorch, Docker, Gradle, Maven, Django, ProtoBuf, ANTLR, Netty, Flume, gRPC. }
+  \resumeItem{Languages}{: C/C++, Python, SQL, Go, Java, Scala, Javascript. }\vspace{-5pt}
+  \resumeItem{Skills}{: Large Scale Distributed System, Performance Optimization, Data Processing Pipeline, Multiprogramming}\vspace{-5pt}
+  \resumeItem{Tools}{: gRPC, Flume, Git, TensorFlow, PyTorch, Docker, Gradle, Maven, Django, ProtoBuf. }
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+    \resumeSubheadingTwoRoles
+    {Google, Inc.}{Mountain View, CA}
+    {Senior Software Engineer @ Youtube Ads Infrastructure}{May 2023 -- Now}{Software Engineer @ Youtube Ads Infrastructure}{May 2019 -- May 2023}
+    \resumeItemListStart 
+        \resumeItem{}{Led the design and implementation for Youtube Ads build pipeline that handles 100k+ messages/second and delivers PB level data daily.}
+        \resumeItem{}{Devised an end to end dataset serving framework for Youtube Ads that automatically handle data canary, rollback and sharding, reducing the friction of dataset onboarding and improving the robustness of the system.}
+        \resumeItem{}{Conducted multiple optimization iterations that  reduced the system's overall latency by 90\% and saved resource cost by 50\%.}
+        \resumeItem{}{Boosted Server efficiency by rebalancing processing between serving and build pipelines. Achieved 70\% reduction of data loading time.}
+        \resumeItem{}{Designed and implemented emergency handling and production health maintenance procedures. Led and conducted release improvement which cut down release time by 50\%.}
+        \resumeItem{}{Established E2E testing and regression testing framework for the Youtube Ads serving and build pipelines. }
+    \resumeItemListEnd
+
     \resumeSubheading
     {Google, Inc.}{Mountain View, CA}
     {Software Engineer Intern @ Display Ads Infrastructure}{June 2018 -- Sept 2018}
@@ -228,36 +153,50 @@ be59af041b/viral-nonprivileged-eval on nn... SUCCESS [uid=4929373293868]        
           {Designed memory shared mechanism for buffers in Neural Network modules that saves 50\% of memory usage.}
         \resumeItem{}{Built a graph converter in Scala that converts machine learning models into graphs to accelerate the training of NN modules.}
       \resumeItemListEnd
-
-%     \resumeSubheading
-%       {Ailibi Medical Technology Co.}{Shanghai, China}
-%       {Software Engineer Intern}{Dec 2014 -- Feb 2015}
-%       \resumeItemListStart
-%         \resumeItem{}
-%           {Built the company's official website using HTML/CSS/JQuery.}
-%         \resumeItem{}
-%           {Documenting user requirements and specifications for the company's mobile app.}
-%       \resumeItemListEnd
+          \resumeSubheading
+      {Ailibi Medical Technology Co.}{Shanghai, China}
+      {Software Engineer Intern}{Dec 2014 -- Feb 2015}
+      \resumeItemListStart
+        \resumeItem{}
+          {Built and maintained the company’s official website, which is a responsive website that is optimized for both desktop and mobile devices. }
+        \resumeItem{}
+          {Conducted user requirements and specification investigation for the company's mobile app.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, San Diego}{La Jolla, CA}
+      {Master of Science in Computer Science}{Sept 2017 -- Mar 2019}
+      \resumeItemListStart
+        \resumeItem{Courses: }{Operating Systems, Security, Database, Networked Systems, Neural Networks, Parallel Computing.} 
+      \resumeItemListEnd
+    \resumeSubheading
+      {Shanghai Jiao Tong University}{Shanghai, China}
+      {Bachelor of Science in Electrical and Computer Engineering}{Sept 2013 -- Aug 2017}
+  \resumeSubHeadingListEnd
+  
+
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-  	\resumeProjectHeading{Key Value Storage Server - Go}{Feb 2019 -- Mar 2019}
-		\resumeItemListStart
-			\resumeSimpleItem{Designed a strongly consistent key value storage system with linearizability and idempotent transaction that can tolerate multiple server failures and network partition.}
-			\resumeSimpleItem{Implemented a full RAFT protocol with leader election, log replication, log compaction and snapshot.}
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%   	\resumeProjectHeading{Key Value Storage Server - Go}{Feb 2019 -- Mar 2019}
+% 		\resumeItemListStart
+% 			\resumeSimpleItem{Designed a strongly consistent key value storage system with linearizability and idempotent transaction that can tolerate multiple server failures and network partition.}
+% 			\resumeSimpleItem{Implemented a full RAFT protocol with leader election, log replication, log compaction and snapshot.}
 			
-			\resumeSimpleItem{Heavily exposed to multithreading semantics of Go.}
+% 			\resumeSimpleItem{Heavily exposed to multithreading semantics of Go.}
 			
-		\resumeItemListEnd
+% 		\resumeItemListEnd
 	
-	\resumeProjectHeading{Vulnerability Excavation of Secure DDS Systems - Ocaml, Python, Docker}{Oct 2018 -- Dec 2018}
-		\resumeItemListStart
-				\resumeSimpleItem{Developed a passive network reconnaissance technique extracting underlying data object topology of Secure DDS Systems, a widely used protocol for IoT devices. Experimented the reconnaissance process in a Docker containerized environment within a software defined network.}
-				\resumeSimpleItem{Built a system validation and penetration testing tools of DDS access control using Ocaml and Imandra, a formal verification tool.}
-		\resumeItemListEnd
+% 	\resumeProjectHeading{Vulnerability Excavation of Secure DDS Systems - Ocaml, Python, Docker}{Oct 2018 -- Dec 2018}
+% 		\resumeItemListStart
+% 				\resumeSimpleItem{Developed a passive network reconnaissance technique extracting underlying data object topology of Secure DDS Systems, a widely used protocol for IoT devices. Experimented the reconnaissance process in a Docker containerized environment within a software defined network.}
+% 				\resumeSimpleItem{Built a system validation and penetration testing tools of DDS access control using Ocaml and Imandra, a formal verification tool.}
+% 		\resumeItemListEnd
 
    % \resumeProjectHeading
     %   {Tessaract: Triton Dropbox Service (Team Leader) - Java, gRPC}{May 2018 -- June 2018}
@@ -282,13 +221,13 @@ be59af041b/viral-nonprivileged-eval on nn... SUCCESS [uid=4929373293868]        
      %   \resumeItemListEnd
     
   
-	 \resumeProjectHeading
-       {Multiprogramming Support for Nachos Kernel - Java}{Oct 2017 -- Nov 2017}
-       \resumeItemListStart
-         \resumeSimpleItem{Designed a virtual memory management system that enables demand paging, lazy paging and page swapping.}
-         \resumeSimpleItem{Managed multithread programming using mutex, semaphore and conditional variable.}
-         \resumeSimpleItem{Implemented file-related and process-related system calls for Nachos kernel.}
-       \resumeItemListEnd
+	 % \resumeProjectHeading
+  %      {Multiprogramming Support for Nachos Kernel - Java}{Oct 2017 -- Nov 2017}
+  %      \resumeItemListStart
+  %        \resumeSimpleItem{Designed a virtual memory management system that enables demand paging, lazy paging and page swapping.}
+  %        \resumeSimpleItem{Managed multithread programming using mutex, semaphore and conditional variable.}
+  %        \resumeSimpleItem{Implemented file-related and process-related system calls for Nachos kernel.}
+  %      \resumeItemListEnd
     
 %    \resumeProjectHeading
 % 	   {Passive Entry Passive Start Smart Key System - Java, Android}{Jun 2017 -- Aug 2017}
@@ -312,20 +251,21 @@ be59af041b/viral-nonprivileged-eval on nn... SUCCESS [uid=4929373293868]        
 %-----------More, Other Projects-----------------
 %\section{Side Projects}
 %  \resumeSubHeadingListStart
-	\resumeSimpleProjectHeading{Triton Router - C}{Nov 2018 -- Dec 2018}{
-		Implemented a simple router that supports ARP, ICMP and IP.
-	}
-	\resumeSimpleProjectHeading{Sliding Window Protocol for Flow Control - C}{Oct 2019}{
-		Implemented an efficient Go-back-N sliding window protocol with CRC error detection. 
-	}
+	% \resumeSimpleProjectHeading{Triton Router - C}{Nov 2018 -- Dec 2018}{
+	% 	Implemented a simple router that supports ARP, ICMP and IP.
+	% }
+	% \resumeSimpleProjectHeading{Sliding Window Protocol for Flow Control - C}{Oct 2019}{
+	% 	Implemented an efficient Go-back-N sliding window protocol with CRC error detection. 
+	% }
   %  \resumeSimpleProjectHeading 
    %    {NewChain: A BitCoin Immitator - Java, Netty}{July 2018 -- Aug 2018}
     %   {Implemented a bitcoin-like ledger service using Netty framework.} 
-    \resumeSimpleProjectHeading
-       {UCSD Class Schedule Calendar Generator - Javascript}{Feb 2018} 
-	   {Designed a chrome extension that can generate a calendar file by parsing the web page of UCSD WebReg. }
-    \resumeSimpleProjectHeading{Gossip Membership Protocol - C++}{Nov 2017 -- Dec 2017}
-	   {Implemented a gossip membership protocol in an emulated distributed system.}
-  \resumeSubHeadingListEnd
+    % \resumeSimpleProjectHeading
+    %   {UCSD Class Schedule Calendar Generator - Javascript}{Feb 2018} 
+	   %{Designed a chrome extension that can generate a calendar file by parsing the web page of UCSD WebReg. }
+    % \resumeSimpleProjectHeading{Gossip Membership Protocol - C++}{Nov 2017 -- Dec 2017}
+	   %{Implemented a gossip membership protocol in an emulated distributed system.}
+  % \resumeSubHeadingListEnd
 %-------------------------------------------
 \end{document}
+
