@@ -39,7 +39,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
@@ -55,9 +55,14 @@
   }
 }
 
+\newcommand{\resumeItemWithColon}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-1pt}\item 
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -90,10 +95,11 @@
     \end{itemize}}\vspace{-5pt}
 }
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemWithColon}[2]{\resumeItemWithColon{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -110,59 +116,6 @@
    & Mobile : +1 858-405-4803\\
 \end{tabular*}
 
-
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-  \resumeSubHeadingListStart
-  \resumeItem{Languages}{: C/C++, Python, SQL, Go, Java, Scala, Javascript. }\vspace{-5pt}
-  \resumeItem{Skills}{: Large Scale Distributed System, Performance Optimization, Data Processing Pipeline, Multiprogramming}\vspace{-5pt}
-  \resumeItem{Tools}{: gRPC, Flume, Git, TensorFlow, PyTorch, Docker, Gradle, Maven, Django, ProtoBuf. }
-  \resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheadingTwoRoles
-    {Google, Inc.}{Mountain View, CA}
-    {Senior Software Engineer @ Youtube Ads Infrastructure}{May 2023 -- Now}{Software Engineer @ Youtube Ads Infrastructure}{May 2019 -- May 2023}
-    \resumeItemListStart 
-        \resumeItem{}{Led the design and implementation for Youtube Ads build pipeline that handles 100k+ messages/second and delivers PB level data daily.}
-        \resumeItem{}{Devised an end to end dataset serving framework for Youtube Ads that automatically handle data canary, rollback and sharding, reducing the friction of dataset onboarding and improving the robustness of the system.}
-        \resumeItem{}{Conducted multiple optimization iterations that  reduced the system's overall latency by 90\% and saved resource cost by 50\%.}
-        \resumeItem{}{Boosted Server efficiency by rebalancing processing between serving and build pipelines. Achieved 70\% reduction of data loading time.}
-        \resumeItem{}{Designed and implemented emergency handling and production health maintenance procedures. Led and conducted release improvement which cut down release time by 50\%.}
-        \resumeItem{}{Established E2E testing and regression testing framework for the Youtube Ads serving and build pipelines. }
-    \resumeItemListEnd
-
-    \resumeSubheading
-    {Google, Inc.}{Mountain View, CA}
-    {Software Engineer Intern @ Display Ads Infrastructure}{June 2018 -- Sept 2018}
-    \resumeItemListStart 
-        \resumeItem{}{Developed a data pipeline in \textbf{Flume} to generate user profile digest for ads recommendation, fixing 75\% missing data generation and traffic tracking.}
-        \resumeItem{}{Deployed 10+ jobs through \textbf{Borg} and executed phased rollout.}
-        \resumeItem{}{Implemented an web UI using \textbf{Django} to monitor results of petabyte scale data service.}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Intel Asia-Pacific R\&D Center}{Shanghai, China}
-      {Software Engineer Intern @ BigDL Data Analytics}{Feb 2017 -- July 2017}
-      \resumeItemListStart
-        \resumeItem{}
-          {Used Bash and Python to efficiently port Neural Network modules from Scala to Python.}
-        \resumeItem{}
-          {Designed memory shared mechanism for buffers in Neural Network modules that saves 50\% of memory usage.}
-        \resumeItem{}{Built a graph converter in Scala that converts machine learning models into graphs to accelerate the training of NN modules.}
-      \resumeItemListEnd
-          \resumeSubheading
-      {Ailibi Medical Technology Co.}{Shanghai, China}
-      {Software Engineer Intern}{Dec 2014 -- Feb 2015}
-      \resumeItemListStart
-        \resumeItem{}
-          {Built and maintained the company’s official website, which is a responsive website that is optimized for both desktop and mobile devices. }
-        \resumeItem{}
-          {Conducted user requirements and specification investigation for the company's mobile app.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
@@ -178,19 +131,72 @@
   \resumeSubHeadingListEnd
   
 
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+  \resumeItem{Languages}{: C/C++, Python, SQL, Go, Java, Scala, Javascript. }\vspace{-5pt}
+  \resumeItem{Skills}{: Large Scale Distributed System, Performance Optimization, Data Processing Pipeline, Multiprogramming}\vspace{-5pt}
+  \resumeItem{Tools}{: gRPC, Flume, Git, TensorFlow, PyTorch, Docker, Gradle, Maven, Django, ProtoBuf. }
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Google}{Mountain View, CA}
+    {Senior Software Engineer @ YouTube Ads Infrastructure}{May 2019 -- Now}
+    \resumeItemListStart 
+        \resumeItem{}{\textbf{Tech lead} for YouTube Ads indexing infrastructure. Led and mentored 3 junior engineers with an \textbf{Agile} methodology that fosters their technical growth and ensures successful delivery of projects.}
+        \resumeItem{}{Designed and implemented a \textbf{large-scale distributed data system} for YouTube Ads that handles over 1 million Incremental updates. Leveraged \textbf{Change Data Capture} and \textbf{Spanner} database to achieve high-throughput data ingestion. Achieved a significant 97\% reduction in incremental processing time.}
+        \resumeItem{}{Orchestrated optimization and migration for ads retrieval systems that improves the \textbf{scalability} for 10x growth in the future and saves 10\%+ resources.}
+        \resumeItem{}{Spearheaded design and implementation of a low latency \textbf{feature extraction} solution for factorized and nearest neighbor machine learning model.}
+        \resumeItem{}{Established a \textbf{CI/CD} workflow incorporating integration and regression tests and automated release process for fast and high quality integration and deployment .}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Google}{Mountain View, CA}
+    {Software Engineer Intern @ Display Ads Infrastructure}{June 2018 -- Sept 2018}
+    \resumeItemListStart 
+        \resumeItem{}{Developed a data pipeline in \textbf{Flume} to generate user profile digest for ads recommendation, fixing 75\% missing data generation and traffic tracking.}
+        \resumeItem{}{Implemented an web UI using \textbf{Django} for monitoring a petabyte scale data service.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Intel Asia-Pacific R\&D Center}{Shanghai, China}
+      {Software Engineer Intern @ BigDL Data Analytics}{Feb 2017 -- July 2017}
+      \resumeItemListStart
+        \resumeItem{}
+          {Designed memory shared mechanism for buffers in \textbf{Neural Network} modules that saves 50\% of memory usage.}
+        \resumeItem{}{Built a graph converter in \textbf{Scala} that converts machine learning models into graphs to accelerate the training of NN modules.}
+      \resumeItemListEnd
+          \resumeSubheading
+      {Ailibi Medical Technology Co.}{Shanghai, China}
+      {Software Engineer Intern}{Dec 2014 -- Feb 2015}
+      \resumeItemListStart
+        \resumeItem{}
+          {Built and deployed the official website for the company using HTML/CSS/jQuery.}
+        \resumeItem{}
+          {Conducted user requirements and specification investigation for the company's mobile app.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
 
 
 %-----------PROJECTS-----------------
-% \section{Projects}
-%   \resumeSubHeadingListStart
-%   	\resumeProjectHeading{Key Value Storage Server - Go}{Feb 2019 -- Mar 2019}
-% 		\resumeItemListStart
-% 			\resumeSimpleItem{Designed a strongly consistent key value storage system with linearizability and idempotent transaction that can tolerate multiple server failures and network partition.}
-% 			\resumeSimpleItem{Implemented a full RAFT protocol with leader election, log replication, log compaction and snapshot.}
-			
-% 			\resumeSimpleItem{Heavily exposed to multithreading semantics of Go.}
-			
-% 		\resumeItemListEnd
+ \section{Projects}
+   \resumeSubHeadingListStart
+    \resumeSubItemWithColon{Key Value Storage Server}
+      {\textbf{RAFT} based strongly consistent key value storage system with linearizability and idempotent transaction using \textbf{Go}.}
+    \resumeSubItemWithColon{Vulnerability Excavation of Secure DDS Systems}
+      {A passive network reconnaissance technique extracting underlying data object topology of Secure DDS Systems built in \textbf{Ocaml} and deployed with \textbf{Docker}.}
+      
+ % \section{Projects}
+ %  \resumeSubHeadingListStart
+ %  	\resumeProjectHeading{Key Value Storage Server}{Feb 2019 -- Mar 2019}
+	% 	\resumeItemListStart
+	% 		\resumeSimpleItem{Designed a \textbf{RAFT} based strongly consistent key value storage system with linearizability and idempotent transaction using \textbf{Go}. }
+	% 	\resumeItemListEnd
 	
 % 	\resumeProjectHeading{Vulnerability Excavation of Secure DDS Systems - Ocaml, Python, Docker}{Oct 2018 -- Dec 2018}
 % 		\resumeItemListStart
@@ -244,7 +250,7 @@
 	%      {Used OpenCV library to compute intensive optical flow fields for each frame and discretized the vector fields.Tracked the foreground object based on the largest connected component, }
 
  
-%  \resumeSubHeadingListEnd
+ \resumeSubHeadingListEnd
 
 %
 
